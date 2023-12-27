@@ -1,17 +1,18 @@
-<div class="card text-center">
-  <div class="card-header">
-    <ul class="nav nav-tabs card-header-tabs">
-      <li class="nav-item">
-        <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="nav-link" href="#">Home</a>
-        <!-- <a routerLink="/home" class="nav-link active" aria-current="true" href="#">Home</a> -->
-      </li>
-      <li class="nav-item">
-        <a routerLink="/login" routerLinkActive="active" class="nav-link" href="#">Login</a>
-      </li>
-      <li class="nav-item">
-        <a routerLink="/about" routerLinkActive="active" class="nav-link" href="#">About</a>
-        <!-- <a routerLink="/about" class="nav-link disabled" aria-disabled="true">About</a> -->
-      </li>
-    </ul>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="navbar-brand p-2 flex-grow-1" href="#">InVin</a>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="nav-link" href="#">Home</a>
+          <a class="nav-link" routerLink="/about" routerLinkActive="active" class="nav-link" href="#">About</a>
+      </div>
+    </div>
+    <a class="btn btn-primary" routerLink="/login" routerLinkActive="active" href="#" role="button">Login</a>
   </div>
-</div>
+</nav>
