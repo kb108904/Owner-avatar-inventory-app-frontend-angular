@@ -13,6 +13,12 @@
           <a class="nav-link" routerLink="/about" routerLinkActive="active" class="nav-link" href="#">About</a>
       </div>
     </div>
+  <div *ngIf="true; else signOut">
     <a class="btn btn-primary" routerLink="/login" routerLinkActive="active" href="#" role="button">Login</a>
+    <a class="btn btn-primary" routerLink="/signup" routerLinkActive="active" href="#" role="button">Register</a>
+  </div>
+  <ng-template #signOut>
+    <a class="btn btn-primary" (click)="logout" routerLinkActive="active" href="#" role="button">Logout</a>
+  </ng-template>
   </div>
 </nav>

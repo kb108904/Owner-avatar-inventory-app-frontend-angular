@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
 import { AuthenticationService } from '../../service/authentication.service';
-import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
+
 @Component({
-  selector: 'app-login',
+  selector: 'app-registration',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.less'
+  templateUrl: './registration.component.html',
+  styleUrl: './registration.component.css'
 })
-export class LoginComponent {
+export class RegistrationComponent {
   form: FormGroup;
 
   get email() {
@@ -29,7 +30,8 @@ export class LoginComponent {
   }
 
   onSubmit() {
-    this.authenticationService.SignIn(this.email, this.password);
+    this.authenticationService.SignUp(this.email, this.password);
     return false;
   }
+
 }
