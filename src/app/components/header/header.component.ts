@@ -15,6 +15,8 @@ export class HeaderComponent {
 
   constructor(private auth: AuthenticationService){}
 
+  user$ = this.auth.userData
+
   logout(){
     this.auth.SignOut()
   }

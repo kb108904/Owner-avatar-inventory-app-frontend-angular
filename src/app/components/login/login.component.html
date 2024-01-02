@@ -1,9 +1,36 @@
-<h1>Login</h1>
-<form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <label>Email</label>
-  <input formControlName="email" type="email" placeholder="Email"/>
-
-  <label>Password</label>
-  <input formControlName="password" type="password" placeholder="Password"/>
-  <button type="submit">Sign In</button>
-</form>
+<div class="container">
+  <h1 class="text-center">Login</h1>
+  <div id="login-row" class="row justify-content-center align-items-center">
+    <div id="login-column" class="col-md-6">
+      <div id="login-box" class="col-md-12">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">
+              Email address
+            </label>
+            <input id="inputEmail" class="form-control" formControlName="email" type="email" placeholder="email" aria-describedby="emailHelp"/>
+            <div id="emailHelp" class="form-text">
+              We'll never share your email with anyone else.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">
+              Password
+            </label>
+            <input id="inputPassword" class="form-control" formControlName="password" type="password" placeholder="password" />
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
+            <label class="form-check-label" for="exampleCheck1">
+              Remember me
+            </label>
+            <a class="ms-3" routerLink="/signup" routerLinkActive="active">register link</a>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

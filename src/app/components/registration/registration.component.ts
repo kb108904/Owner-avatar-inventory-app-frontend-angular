@@ -25,7 +25,8 @@ export class RegistrationComponent {
   constructor(private authenticationService: AuthenticationService, private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required]
+      password: ['', Validators.required],
+      confirmPassword: ['', Validators.required]
     });
   }
 

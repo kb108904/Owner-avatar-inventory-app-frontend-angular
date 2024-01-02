@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from "@angular/fire/compat/auth";
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import firebase from 'firebase/compat/app';
 
 
@@ -37,6 +37,12 @@ export class AuthenticationService {
   /* Sign out */
   SignOut() {
     this.angularFireAuth
-      .signOut();
+      .signOut().then(() => {
+        console.log('Successfully signed out!');
+      })
+      .catch((error) => {
+        console.log('Something is wrong:',error.message);
+      });;
+      return false;
   }
 }
